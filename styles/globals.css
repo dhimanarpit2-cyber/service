@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f7f9fc;
+  --foreground: #191c1e;
+}
+
+body {
+  background-color: #FAF9F6;
+  color: #1A1A1A;
+}
+
+.terracotta-bg {
+  background-color: #C15F41;
+}
+
+.terracotta-text {
+  color: #C15F41;
+}
+
+.terracotta-border {
+  border-color: #C15F41;
+}
+
+.soft-shadow {
+  box-shadow: 0px 12px 32px rgba(26, 26, 26, 0.04);
+}
+
+.hr-guide {
+  border-top: 1px solid #EAE9E6;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Noto Serif", serif;
+  }
+}

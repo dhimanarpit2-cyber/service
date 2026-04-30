@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services - AssistPro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&amp;family=Noto+Serif:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container": "#eceef1",
+                      "primary-fixed-dim": "#ffb59f",
+                      "on-tertiary-container": "#fdfcf9",
+                      "outline-variant": "#dcc1b9",
+                      "on-tertiary-fixed-variant": "#464745",
+                      "surface-bright": "#f7f9fc",
+                      "surface-dim": "#d8dadd",
+                      "tertiary-fixed-dim": "#c7c6c4",
+                      "background": "#f7f9fc",
+                      "on-background": "#191c1e",
+                      "surface-container-highest": "#e0e3e6",
+                      "on-secondary": "#ffffff",
+                      "secondary-fixed": "#e5e2e1",
+                      "error": "#ba1a1a",
+                      "secondary": "#5f5e5e",
+                      "surface-variant": "#e0e3e6",
+                      "surface-container-high": "#e6e8eb",
+                      "on-secondary-container": "#636262",
+                      "primary-fixed": "#ffdbd1",
+                      "on-error": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "inverse-primary": "#ffb59f",
+                      "on-tertiary-fixed": "#1a1c1a",
+                      "primary": "#994125",
+                      "secondary-container": "#e2dfde",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "on-secondary-fixed-variant": "#474746",
+                      "surface-tint": "#9c4328",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-fixed-variant": "#7d2c13",
+                      "error-container": "#ffdad6",
+                      "on-primary-container": "#fffbff",
+                      "on-primary": "#ffffff",
+                      "outline": "#89726c",
+                      "on-surface-variant": "#56423d",
+                      "tertiary": "#5b5c5a",
+                      "on-error-container": "#93000a",
+                      "primary-container": "#b8583b",
+                      "on-surface": "#191c1e",
+                      "inverse-surface": "#2d3133",
+                      "tertiary-fixed": "#e3e2e0",
+                      "tertiary-container": "#747572",
+                      "secondary-fixed-dim": "#c8c6c5",
+                      "surface": "#f7f9fc",
+                      "surface-container-low": "#f2f4f7",
+                      "on-primary-fixed": "#3a0a00",
+                      "inverse-on-surface": "#eff1f4"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "section-gap": "120px",
+                      "gutter": "32px",
+                      "container-max": "1280px",
+                      "margin-mobile": "20px",
+                      "unit": "8px"
+              },
+              "fontFamily": {
+                      "headline-md": [
+                              "Noto Serif"
+                      ],
+                      "headline-hero": [
+                              "Noto Serif"
+                      ],
+                      "body-md": [
+                              "Manrope"
+                      ],
+                      "display": [
+                              "Noto Serif"
+                      ],
+                      "body-lg": [
+                              "Manrope"
+                      ],
+                      "headline-lg": [
+                              "Noto Serif"
+                      ],
+                      "label-caps": [
+                              "Manrope"
+                      ]
+              },
+              "fontSize": {
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-hero": [
+                              "72px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display": [
+                              "84px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased pt-24">
+<!-- TopNavBar (Shared Component) -->
+<nav class="fixed top-0 w-full z-50 bg-[#FAF9F6]/90 backdrop-blur-md dark:bg-stone-950/90 border-b border-stone-200 dark:border-stone-800 shadow-[0px_12px_32px_rgba(26,26,26,0.04)]">
+<div class="max-w-[1280px] mx-auto flex justify-between items-center px-8 py-6">
+<div class="text-2xl font-bold text-stone-900 dark:text-stone-50 flex items-center gap-2">
+                AssistPro
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#C15F41] hover:scale-105 transition-all duration-300" href="#">Home</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#C15F41] hover:scale-105 transition-all duration-300" href="#">About</a>
+<a class="text-[#C15F41] border-b border-[#C15F41] pb-1 hover:scale-105 transition-all duration-300" href="#">Services</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#C15F41] hover:scale-105 transition-all duration-300" href="#">Work</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#C15F41] hover:scale-105 transition-all duration-300" href="#">Contact</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="bg-[#C15F41] text-white px-6 py-2 rounded-full font-body-md text-body-md hover:scale-105 transition-all duration-300 shadow-sm flex items-center gap-2">
+                    Book a Call
+                    <span class="material-symbols-outlined text-[20px]">auto_awesome</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-8">
+<!-- Hero Section -->
+<section class="mt-section-gap mb-section-gap text-center max-w-4xl mx-auto">
+<nav class="flex justify-center items-center space-x-2 text-on-surface-variant font-label-caps text-label-caps mb-8 uppercase">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary">Services</span>
+</nav>
+<h1 class="font-display text-display text-on-surface mb-6">Everything You Need, Done Right</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Bespoke support tailored to your unique workflow. We handle the intricacies so you can focus on the big picture.
+            </p>
+</section>
+<!-- Services Tabbed Showcase -->
+<section class="mb-section-gap">
+<div class="flex flex-col lg:flex-row gap-gutter">
+<!-- Sidebar Tabs (30%) -->
+<div class="lg:w-[30%] flex flex-col space-y-2">
+<button class="text-left px-6 py-4 rounded-xl bg-surface-container text-on-surface font-body-md text-body-md flex justify-between items-center group transition-colors">
+<span class="font-semibold text-primary">Executive Support</span>
+<span class="material-symbols-outlined text-primary">arrow_forward</span>
+</button>
+<button class="text-left px-6 py-4 rounded-xl text-on-surface-variant hover:bg-surface-container-low font-body-md text-body-md transition-colors flex justify-between items-center">
+                        Inbox &amp; Calendar
+                    </button>
+<button class="text-left px-6 py-4 rounded-xl text-on-surface-variant hover:bg-surface-container-low font-body-md text-body-md transition-colors flex justify-between items-center">
+                        Research
+                    </button>
+<button class="text-left px-6 py-4 rounded-xl text-on-surface-variant hover:bg-surface-container-low font-body-md text-body-md transition-colors flex justify-between items-center">
+                        Social Media
+                    </button>
+<button class="text-left px-6 py-4 rounded-xl text-on-surface-variant hover:bg-surface-container-low font-body-md text-body-md transition-colors flex justify-between items-center">
+                        Project Management
+                    </button>
+<button class="text-left px-6 py-4 rounded-xl text-on-surface-variant hover:bg-surface-container-low font-body-md text-body-md transition-colors flex justify-between items-center">
+                        Customer Support
+                    </button>
+</div>
+<!-- Right Panel (70%) -->
+<div class="lg:w-[70%] bg-surface-container-low rounded-[24px] p-2 md:p-4">
+<div class="bg-surface-container-lowest rounded-[20px] p-8 md:p-12 shadow-[0px_12px_32px_rgba(26,26,26,0.04)] border border-surface-variant h-full flex flex-col md:flex-row gap-12">
+<!-- Content -->
+<div class="flex-1">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">Executive Support</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                                White-glove assistance for top-level professionals. We anticipate your needs, manage your complex schedules, and act as the ultimate gatekeeper, ensuring your time is spent only on high-leverage activities.
+                            </p>
+<ul class="space-y-4 mb-8">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-1">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface">Proactive schedule &amp; priority management</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-1">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface">High-level communication drafting</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-1">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface">Travel and itinerary orchestration</span>
+</li>
+</ul>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-container-low text-on-surface font-label-caps text-label-caps px-4 py-2 rounded-full uppercase">Gatekeeping</span>
+<span class="bg-surface-container-low text-on-surface font-label-caps text-label-caps px-4 py-2 rounded-full uppercase">Confidentiality</span>
+<span class="bg-surface-container-low text-on-surface font-label-caps text-label-caps px-4 py-2 rounded-full uppercase">Precision</span>
+</div>
+</div>
+<!-- Visual -->
+<div class="md:w-[40%] rounded-xl overflow-hidden bg-surface-container flex items-center justify-center min-h-[300px]">
+<img alt="Executive workspace" class="w-full h-full object-cover" data-alt="A meticulously organized executive desk in a modern, light-filled studio office. The scene features minimalist architectural elements, soft diffused natural light, and a warm editorial aesthetic. Items on the desk include a sleek laptop, a leather-bound notebook, and a designer coffee cup, set against an off-white background palette. The mood is calm, professional, and sophisticated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTkVegVDsvgVQ-y8veYW_VNAq8dXw5Tb-mp5VWQ9wQBllna-URMl-MK2RtL2Uv7s7AwrPc7Kuf-au1NDewBi0SbTP7lJUu7kYOFG5ztNkWpO_ReretnSj7SjD8ajXJ9W0WGjoC3tUqUORHjF3_xxxxM2tkOZDeZrCBgaN-bUyowvWjhYRBwFl4b882I2pjTZR8Bj-R0Z1YYK_6qnrxQ99t6pHq-cZHQwIa5K0PaaWq8ifdDBAR_PUoOQ_3kmKtobjpccvmfwgE2wzQ"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Section -->
+<section class="mb-section-gap">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Transparent Pricing</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Simple tiers to fit the scale of your needs.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Starter -->
+<div class="bg-surface-container-lowest rounded-[24px] p-8 border border-surface-variant shadow-[0px_4px_16px_rgba(26,26,26,0.02)] flex flex-col">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Starter</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 pb-6 border-b border-surface-variant">Essential support for focused individuals.</p>
+<div class="mb-8">
+<span class="font-display text-[48px] font-semibold text-on-surface">$500</span>
+<span class="font-body-md text-on-surface-variant">/mo</span>
+</div>
+<ul class="space-y-4 mb-8 flex-grow">
+<li class="flex items-center gap-3 font-body-md text-body-md text-on-surface"><span class="material-symbols-outlined text-tertiary-container text-[18px]">done</span> 20 hours per month</li>
+<li class="flex items-center gap-3 font-body-md text-body-md text-on-surface"><span class="material-symbols-outlined text-tertiary-container text-[18px]">done</span> Dedicated Assistant</li>
+<li class="flex items-center gap-3 font-body-md text-body-md text-on-surface"><span class="material-symbols-outlined text-tertiary-container text-[18px]">done</span> Standard Response Time</li>
+</ul>
+<button class="w-full border border-on-surface text-on-surface font-body-md text-body-md py-3 rounded-full hover:bg-surface-container-low transition-colors">Select Starter</button>
+</div>
+<!-- Growth (Elevated) -->
+<div class="bg-surface-container-lowest rounded-[24px] p-8 border-2 border-primary shadow-[0px_16px_40px_rgba(26,26,26,0.08)] flex flex-col relative transform md:-translate-y-4">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-on-primary font-label-caps text-label-caps px-4 py-1 rounded-full uppercase tracking-wider">
+                        Most Popular
+                    </div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Growth</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 pb-6 border-b border-surface-variant">Expanded capacity for growing teams.</p>
+<div class="mb-8">
+<span class="font-display text-[48px] font-semibold text-on-surface">$1,200</span>
+<span class="font-body-md text-on-surface-variant">/mo</span>
+</div>
+<ul class="space-y-4 mb-8 flex-grow">
+<li class="flex items-center gap-3 font-body-md text-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[18px]">done</span> 50 hours per month</li>
+<li class="flex items-center gap-3 font-body-md text-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[18px]">done</span> Dedicated Assistant + Backup</li>
+<li class="flex items-center gap-3 font-body-md text-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[18px]">done</span> Priority Response Time</li>
+<li class="flex items-center gap-3 font-body-md text-body-md text-on-surface"><span class="material-symbols-outlined text-primary text-[18px]">done</span> Strategic Consultation</li>
+</ul>
+<button class="w-full bg-primary text-on-primary font-body-md text-body-md py-3 rounded-full hover:scale-[1.02] transition-transform shadow-md">Select Growth</button>
+</div>
+<!-- Executive -->
+<div class="bg-surface-container-lowest rounded-[24px] p-8 border border-surface-variant shadow-[0px_4px_16px_rgba(26,26,26,0.02)] flex flex-col">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Executive</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 pb-6 border-b border-surface-variant">Comprehensive support suite.</p>
+<div class="mb-8">
+<span class="font-display text-[48px] font-semibold text-on-surface">$2,500</span>
+<span class="font-body-md text-on-surface-variant">/mo</span>
+</div>
+<ul class="space-y-4 mb-8 flex-grow">
+<li class="flex items-center gap-3 font-body-md text-body-md text-on-surface"><span class="material-symbols-outlined text-tertiary-container text-[18px]">done</span> 120 hours per month</li>
+<li class="flex items-center gap-3 font-body-md text-body-md text-on-surface"><span class="material-symbols-outlined text-tertiary-container text-[18px]">done</span> Full Support Team</li>
+<li class="flex items-center gap-3 font-body-md text-body-md text-on-surface"><span class="material-symbols-outlined text-tertiary-container text-[18px]">done</span> Immediate Response Time</li>
+<li class="flex items-center gap-3 font-body-md text-body-md text-on-surface"><span class="material-symbols-outlined text-tertiary-container text-[18px]">done</span> Advanced Analytics</li>
+</ul>
+<button class="w-full border border-on-surface text-on-surface font-body-md text-body-md py-3 rounded-full hover:bg-surface-container-low transition-colors">Select Executive</button>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="mb-section-gap max-w-3xl mx-auto">
+<div class="text-center mb-12">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Frequently Asked Questions</h2>
+</div>
+<div class="space-y-4">
+<!-- Accordion Item 1 -->
+<div class="border-b border-surface-variant pb-4">
+<button class="w-full flex justify-between items-center py-4 text-left group">
+<span class="font-headline-md text-[24px] text-on-surface group-hover:text-primary transition-colors">How do you match me with an assistant?</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">add</span>
+</button>
+</div>
+<!-- Accordion Item 2 -->
+<div class="border-b border-surface-variant pb-4">
+<button class="w-full flex justify-between items-center py-4 text-left group">
+<span class="font-headline-md text-[24px] text-on-surface group-hover:text-primary transition-colors">Can hours roll over to the next month?</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">add</span>
+</button>
+</div>
+<!-- Accordion Item 3 -->
+<div class="border-b border-surface-variant pb-4">
+<button class="w-full flex justify-between items-center py-4 text-left group">
+<span class="font-headline-md text-[24px] text-on-surface group-hover:text-primary transition-colors">What software do your assistants use?</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">add</span>
+</button>
+</div>
+<!-- Accordion Item 4 -->
+<div class="border-b border-surface-variant pb-4">
+<button class="w-full flex justify-between items-center py-4 text-left group">
+<span class="font-headline-md text-[24px] text-on-surface group-hover:text-primary transition-colors">Is there a long-term commitment?</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">add</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full mt-24 bg-stone-900 dark:bg-black border-t border-stone-800">
+<div class="max-w-[1280px] mx-auto px-8 py-20 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div>
+<span class="text-4xl font-bold text-white mb-8 block">AssistPro</span>
+<p class="font-serif text-stone-300 text-sm">© 2024 AssistPro Agency. All rights reserved.</p>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-6">Brand</h4>
+<ul class="space-y-4">
+<li><a class="font-serif text-stone-300 hover:text-[#C15F41] transition-colors duration-200" href="#">Our Story</a></li>
+<li><a class="font-serif text-stone-300 hover:text-[#C15F41] transition-colors duration-200" href="#">Approach</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-6">Navigation</h4>
+<ul class="space-y-4">
+<li><a class="font-serif text-stone-300 hover:text-[#C15F41] transition-colors duration-200" href="#">Home</a></li>
+<li><a class="font-serif text-stone-300 hover:text-[#C15F41] transition-colors duration-200" href="#">Services</a></li>
+<li><a class="font-serif text-stone-300 hover:text-[#C15F41] transition-colors duration-200" href="#">Work</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-6">Contact</h4>
+<ul class="space-y-4">
+<li><a class="font-serif text-stone-300 hover:text-[#C15F41] transition-colors duration-200" href="#">Book a Consultation</a></li>
+<li><a class="font-serif text-stone-300 hover:text-[#C15F41] transition-colors duration-200" href="#">hello@assistpro.com</a></li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>
