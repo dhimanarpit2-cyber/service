@@ -2,6 +2,7 @@ import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,16 +14,16 @@ export default function About() {
   return (
     <>
       <Header />
-      <main className="flex-grow pt-[120px]">
+      <main className="flex-grow pt-[80px]">
         {/* Hero Section */}
-        <section className="max-w-[1280px] mx-auto px-8 pt-[120px] pb-[60px] text-center">
-          <h1 className="font-headline-hero text-headline-hero text-on-surface mb-8 max-w-[900px] mx-auto">
+        <section className="max-w-[1280px] mx-auto px-8 pt-[80px] pb-[60px] text-center">
+          <h1 className="font-headline-hero text-4xl md:text-6xl lg:text-8xl text-on-surface mb-8 max-w-[900px] mx-auto leading-tight">
             The Team Behind Your Time Freedom
           </h1>
-          <p className="font-body-lg text-body-lg text-on-surface-variant max-w-[600px] mx-auto mb-16">
+          <p className="font-body-lg text-lg md:text-xl text-on-surface-variant max-w-[600px] mx-auto mb-12 md:mb-16">
             We believe that true luxury is having the time to focus on what matters most. Our bespoke assistance is designed to elevate your daily operations with quiet efficiency.
           </p>
-          <div className="w-full h-[600px] rounded-card overflow-hidden shadow-soft relative">
+          <div className="w-full h-[300px] md:h-[500px] lg:h-[600px] rounded-[32px] md:rounded-card overflow-hidden shadow-soft relative">
             <Image
               alt="Hero Image"
               className="w-full h-full object-cover object-center"
@@ -34,7 +35,7 @@ export default function About() {
         </section>
 
         {/* Mission Section */}
-        <section className="max-w-[1280px] mx-auto px-8 py-[120px]">
+        <section className="max-w-[1280px] mx-auto px-8 py-[80px]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="pr-0 md:pr-16 relative">
               <div className="hidden md:block absolute right-0 top-0 bottom-0 w-[1px] bg-[#EAE9E6]"></div>
@@ -54,7 +55,7 @@ export default function About() {
         </section>
 
         {/* Values Section */}
-        <section className="max-w-[1280px] mx-auto px-8 py-[120px] bg-surface-bright rounded-card my-[120px] shadow-soft">
+        <section className="max-w-[1280px] mx-auto px-8 py-[80px] bg-surface-bright rounded-card my-[80px] shadow-soft">
           <div className="text-center mb-16">
             <h2 className="font-headline-md text-headline-md text-on-surface mb-4">Core Principles</h2>
             <div className="w-16 h-[1px] bg-outline mx-auto"></div>
@@ -99,7 +100,7 @@ export default function About() {
         </section>
 
         {/* Team Section */}
-        <section className="max-w-[1280px] mx-auto px-8 py-[120px]">
+        <section className="max-w-[1280px] mx-auto px-8 py-[80px]">
           <div className="text-center mb-16">
             <h2 className="font-headline-lg text-headline-lg text-on-surface mb-4">People You&apos;ll Actually Enjoy Working With</h2>
             <p className="font-body-lg text-body-lg text-on-surface-variant max-w-[600px] mx-auto">
@@ -154,7 +155,7 @@ export default function About() {
         </section>
 
         {/* Why Choose Us */}
-        <section className="max-w-[1280px] mx-auto px-8 py-[120px]">
+        <section className="max-w-[1280px] mx-auto px-8 py-[80px]">
           <div className="text-center mb-24">
             <h2 className="font-headline-lg text-headline-lg text-on-surface mb-4">The AssistPro Difference</h2>
             <div className="w-16 h-[1px] bg-outline mx-auto"></div>
@@ -197,6 +198,36 @@ export default function About() {
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLdUyynz-MjQwAo_B2F3bJWIHjC-ta4wZSIwFQOp-jkpkK3fxrHoD-PX24kZc0ifuJ8x-SomSTXugwtMRbfiEh_IhbrnJCzKM3Y17GpFEVNU-ZwvXykTh1bOgBV-iJGm8JBPPSpge4N5ObaSGAUVFRU0lw50wt5afN6CzVbm2LBWpDpUbLhLOl8XgjkKf4VKcCJaZLQlyYSuxZ3yIN75zbo4g-rm2Df1iWr5jGuh0myaA01DLDlH2E5GU7LqmSpL1CnldzBFJ3p9bc"
                 fill
               />
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Banner */}
+        <section className="max-w-[1280px] mx-auto px-8 pb-16">
+          <div className="bg-[#C15F41] rounded-[48px] overflow-hidden relative group">
+            <div className="grid grid-cols-1 lg:grid-cols-2">
+              <div className="p-12 md:p-20 flex flex-col justify-center items-start text-left space-y-8 relative z-10">
+                <h2 className="font-headline-hero text-headline-hero text-white leading-tight">
+                  Ready to Reclaim <br className="hidden md:block" /> Your Time?
+                </h2>
+                <p className="font-body-lg text-body-lg text-white/80 max-w-md">
+                  Partner with a dedicated virtual assistant today and experience the calm of uncompromising reliability.
+                </p>
+                <div className="pt-4">
+                  <Link href="/contact" className="inline-block bg-white text-[#C15F41] px-12 py-5 rounded-full font-body-md text-body-md font-bold hover:bg-stone-100 hover:shadow-2xl transition-all duration-300">
+                    Get Started Today
+                  </Link>
+                </div>
+              </div>
+              <div className="relative min-h-[300px] lg:min-h-full overflow-hidden">
+                <Image
+                  alt="Minimalist productive workspace"
+                  className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000"
+                  fill
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#C15F41] via-transparent to-transparent lg:block hidden" />
+              </div>
             </div>
           </div>
         </section>

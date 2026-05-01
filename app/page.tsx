@@ -2,6 +2,8 @@ import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import Link from "next/link";
+import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 
 export default function Home() {
   return (
@@ -9,27 +11,27 @@ export default function Home() {
       <Header />
       <main className="flex-grow pt-[100px]">
         {/* 1. Hero */}
-        <section className="max-w-[1280px] mx-auto px-8 pt-[120px] pb-[80px]">
+        <section className="max-w-[1280px] mx-auto px-8 pt-[80px] pb-[80px]">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-7 space-y-8 pr-0 lg:pr-12">
               <span className="inline-block bg-surface-container-low px-4 py-1.5 rounded-full font-label-caps text-label-caps text-on-surface uppercase tracking-widest">
                 VIRTUAL ASSISTANT AGENCY
               </span>
-              <h1 className="font-headline-hero text-headline-hero text-on-surface">
-                We Handle the Details, You Drive the Vision
+              <h1 className="font-headline-hero text-5xl md:text-7xl lg:text-8xl text-on-surface leading-[1.1]">
+                We Handle the Details, <br className="hidden md:block" /> You Drive the Vision
               </h1>
-              <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+              <p className="font-body-lg text-lg md:text-xl text-on-surface-variant max-w-2xl">
                 Bespoke virtual assistance tailored for founders and executives. Regain
                 hours in your week with our highly vetted, proactive professionals
                 managing your operational blind spots.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
-                <button className="bg-[#C15F41] text-white px-8 py-4 rounded-full font-body-md text-body-md hover:scale-[1.02] transition-transform soft-shadow">
+                <Link href="/contact" className="bg-[#C15F41] text-white px-8 py-4 rounded-full font-body-md text-body-md hover:scale-[1.02] transition-transform soft-shadow text-center min-w-[180px]">
                   Get Started
-                </button>
-                <button className="bg-transparent border border-[#1A1A1A] text-[#1A1A1A] px-8 py-4 rounded-full font-body-md text-body-md hover:bg-surface-container-low transition-colors">
+                </Link>
+                <Link href="/services" className="bg-transparent border border-[#1A1A1A] text-[#1A1A1A] px-8 py-4 rounded-full font-body-md text-body-md hover:bg-surface-container-low transition-colors text-center min-w-[180px]">
                   View Services
-                </button>
+                </Link>
               </div>
               <div className="pt-6 flex flex-wrap items-center gap-x-6 gap-y-2 font-body-md text-body-md text-on-surface-variant/70">
                 <span className="flex items-center gap-1">
@@ -83,7 +85,7 @@ export default function Home() {
         </section>
 
         {/* 3. What We Do */}
-        <section className="max-w-[1280px] mx-auto px-8 py-[120px]">
+        <section className="max-w-[1280px] mx-auto px-8 py-[80px]">
           <div className="hr-guide mb-16"></div>
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
             <div className="md:col-span-3">
@@ -114,7 +116,7 @@ export default function Home() {
         </section>
 
         {/* 4. Services Snapshot */}
-        <section className="max-w-[1280px] mx-auto px-8 pb-[120px]">
+        <section className="max-w-[1280px] mx-auto px-8 pb-[80px]">
           <div className="flex justify-between items-end mb-12">
             <h2 className="font-headline-lg text-headline-lg text-on-surface">What We Take Off Your Plate</h2>
           </div>
@@ -144,26 +146,26 @@ export default function Home() {
                 <span className="material-symbols-outlined text-[32px] text-[#C15F41] mb-6">{service.icon}</span>
                 <h3 className="font-headline-md text-[24px] text-on-surface mb-4">{service.title}</h3>
                 <p className="font-body-md text-body-md text-on-surface-variant mb-8 line-clamp-2">{service.desc}</p>
-                <a className="font-body-md text-body-md text-[#C15F41] flex items-center gap-2 group-hover:gap-3 transition-all" href="#">
+                <Link className="font-body-md text-body-md text-[#C15F41] flex items-center gap-2 group-hover:gap-3 transition-all" href="/services">
                   Learn More <span className="material-symbols-outlined text-[20px]">arrow_forward</span>
-                </a>
+                </Link>
               </div>
             ))}
           </div>
           <div className="mt-12 text-center">
-            <a
+            <Link
               className="font-body-lg text-body-lg text-on-surface border-b border-[#1A1A1A] pb-1 hover:text-[#C15F41] hover:border-[#C15F41] transition-colors inline-flex items-center gap-2"
-              href="#"
+              href="/services"
             >
               View all 6 services <span className="material-symbols-outlined text-[20px]">arrow_forward</span>
-            </a>
+            </Link>
           </div>
         </section>
 
         {/* 5. How It Works */}
-        <section className="max-w-[1280px] mx-auto px-8 pb-[120px]">
-          <h2 className="font-headline-lg text-headline-lg text-on-surface text-center mb-24">Up and Running in 3 Simple Steps</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 relative">
+        <section className="max-w-[1280px] mx-auto px-8 pb-[80px]">
+          <h2 className="font-headline-lg text-3xl md:text-5xl lg:text-6xl text-on-surface text-center mb-16 md:mb-24">Up and Running in 3 Simple Steps</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 relative">
             <div className="hidden md:block absolute top-[60px] left-[15%] right-[15%] border-t-2 border-dashed border-surface-variant -z-10"></div>
             {[
               {
@@ -182,61 +184,76 @@ export default function Home() {
                 desc: "Experience immediate relief as your new assistant begins managing tasks from day one.",
               },
             ].map((step) => (
-              <div key={step.num} className="text-center relative">
-                <div className="font-display text-[84px] text-[#C15F41] opacity-20 mb-4 leading-none">{step.num}</div>
-                <div className="w-4 h-4 bg-[#C15F41] rounded-full mx-auto mb-8 ring-8 ring-[#FAF9F6]"></div>
-                <h3 className="font-headline-md text-[24px] text-on-surface mb-4">{step.title}</h3>
-                <p className="font-body-md text-body-md text-on-surface-variant">{step.desc}</p>
+              <div key={step.num} className="text-center relative bg-[#FAF9F6] md:bg-transparent p-8 md:p-0 rounded-3xl border border-surface-variant md:border-none">
+                <div className="font-display text-[64px] md:text-[84px] text-[#C15F41] opacity-20 mb-4 leading-none">{step.num}</div>
+                <div className="w-4 h-4 bg-[#C15F41] rounded-full mx-auto mb-8 ring-8 ring-[#FAF9F6] hidden md:block"></div>
+                <h3 className="font-headline-md text-xl md:text-2xl text-on-surface mb-4">{step.title}</h3>
+                <p className="font-body-md text-base text-on-surface-variant">{step.desc}</p>
               </div>
             ))}
           </div>
           <div className="mt-20 text-center">
-            <button className="bg-[#C15F41] text-white px-8 py-4 rounded-full font-body-md text-body-md hover:scale-[1.02] transition-transform soft-shadow">
+            <Link href="/contact" className="inline-block bg-[#C15F41] text-white px-8 py-4 rounded-full font-body-md text-body-md hover:scale-[1.02] transition-transform soft-shadow">
               Book a Free Discovery Call
-            </button>
+            </Link>
           </div>
         </section>
 
         {/* 6. Testimonials */}
-        <section className="bg-[#F2F1ED] py-[120px]">
-          <div className="max-w-[1280px] mx-auto px-8 text-center">
-            <h2 className="font-label-caps text-label-caps text-on-surface-variant mb-16 uppercase tracking-widest">
-              Trusted by Founders & Busy Professionals
-            </h2>
-            <div className="max-w-4xl mx-auto relative">
-              <span className="absolute -top-12 -left-12 font-display text-[120px] text-[#C15F41] opacity-20 leading-none">“</span>
-              <p className="font-headline-md text-[36px] text-on-surface leading-tight mb-12 relative z-10 italic">
-                AssistPro didn&apos;t just give me an assistant; they gave me back my evenings. The level of proactivity and attention to detail is unmatched. I finally feel like I&apos;m steering the ship instead of constantly patching leaks.
-              </p>
-              <div className="flex flex-col items-center gap-4">
-                  <Image
-                    alt="Client Avatar"
-                    className="w-20 h-20 rounded-full object-cover border-2 border-white shadow-sm"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn4lseu_UlAPmsol6pgRueY3rPNAnh68N-vfI-iwfsh14jNLSvhiLPC5XCK1vHyj5W7-3MYlhngVuZL6ZxYl4zy3gWbNUEyhBePNevfGMeRwiNuFd5IXPK-VlTHzOWn2AwBpXwd8AL3auvKoelTfH2TpRa0aGWmYe91fmxKe5ZnC8PKh0XK1YdrK1wyaHsa3J2Rsvg0HYDstWLRHVrgmPwbJ-te0k12SHI0K9SRY_BWmflJsPzsRwAwvu95IKKBnptBVF7CPp3_6fV"
-                    width={80}
-                    height={80}
-                  />
-                <div>
-                  <div className="font-headline-md text-[18px] text-on-surface">Sarah Jenkins</div>
-                  <div className="font-body-md text-body-md text-on-surface-variant">CEO, TechForward</div>
-                </div>
-              </div>
+        <section className="bg-surface-bright py-32 border-t border-surface-variant overflow-hidden">
+          <div className="max-w-[1280px] mx-auto px-8">
+            <div className="text-center mb-16">
+              <span className="font-label-caps text-label-caps text-[#C15F41] mb-4 block uppercase tracking-[0.2em]">Success Stories</span>
+              <h2 className="font-headline-lg text-headline-lg text-on-surface">Trusted by the World&apos;s Most Productive Founders</h2>
             </div>
+            
+            <TestimonialsCarousel />
           </div>
         </section>
 
-        {/* 7. CTA Banner */}
-        <section className="bg-[#C15F41] py-24">
-          <div className="max-w-[1280px] mx-auto px-8 text-center space-y-8">
-            <h2 className="font-headline-hero text-headline-hero text-white">Ready to Reclaim Your Time?</h2>
-            <p className="font-body-lg text-body-lg text-white/90 max-w-2xl mx-auto">
-              Stop drowning in details. Partner with a dedicated virtual assistant today and start focusing on what truly matters for your business.
-            </p>
-            <div className="pt-4">
-              <button className="bg-white text-[#C15F41] px-10 py-5 rounded-full font-body-md text-body-md font-bold hover:scale-[1.02] transition-transform shadow-lg">
-                Get Started Today
-              </button>
+        {/* 7. Ultra-Modern CTA */}
+        <section className="max-w-[1280px] mx-auto px-8 pb-20">
+          <div className="relative overflow-hidden bg-[#1A1A1A] rounded-[48px] py-24 md:py-32 px-8 group">
+            {/* Animated Background Glows */}
+            <div className="absolute top-0 -left-20 w-96 h-96 bg-[#C15F41] opacity-20 blur-[120px] rounded-full animate-pulse pointer-events-none" />
+            <div className="absolute bottom-0 -right-20 w-96 h-96 bg-[#994125] opacity-10 blur-[120px] rounded-full animate-pulse pointer-events-none" style={{ animationDelay: '2s' }} />
+            
+            <div className="relative z-10 max-w-3xl mx-auto text-center space-y-10">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
+                <span className="w-2 h-2 rounded-full bg-[#C15F41] animate-ping" />
+                <span className="font-label-caps text-[11px] text-white/70 uppercase tracking-[0.2em]">Available for New Partners</span>
+              </div>
+              
+              <h2 className="font-headline-hero text-headline-hero text-white leading-[1.1] tracking-tight">
+                Stop Managing. <br /> 
+                <span className="text-[#C15F41]">Start Leading.</span>
+              </h2>
+              
+              <p className="font-body-lg text-body-lg text-white/60 max-w-xl mx-auto leading-relaxed">
+                Join the ranks of founders who have reclaimed 20+ hours every week. Your dedicated premium assistant is just a click away.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-4">
+                <Link 
+                  href="/contact" 
+                  className="group relative px-10 py-5 bg-[#C15F41] text-white rounded-full font-body-md font-bold overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(193,95,65,0.3)]"
+                >
+                  <span className="relative z-10">Get Started Today</span>
+                  <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity" />
+                </Link>
+                
+                <Link 
+                  href="/services" 
+                  className="font-body-md text-white/80 hover:text-white transition-colors flex items-center gap-2 group"
+                >
+                  Explore Capabilities 
+                  <span className="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </Link>
+              </div>
             </div>
+            
+            {/* Minimalist Grid Pattern Overlay */}
+            <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
           </div>
         </section>
       </main>

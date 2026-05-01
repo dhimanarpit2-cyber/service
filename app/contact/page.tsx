@@ -2,6 +2,7 @@ import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import ContactForm from "@/components/ContactForm";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,7 +14,7 @@ export default function Contact() {
   return (
     <>
       <Header />
-      <main className="pt-32 pb-[120px]">
+      <main className="pt-32 pb-[80px]">
         {/* Hero Section */}
         <section className="max-w-[1280px] mx-auto px-8 mt-20 mb-24 text-center">
           <h1 className="font-headline-hero text-headline-hero text-on-surface mb-6 max-w-4xl mx-auto">
@@ -25,62 +26,10 @@ export default function Contact() {
         </section>
 
         {/* Two-Column Layout */}
-        <section className="max-w-[1280px] mx-auto px-8 flex flex-col lg:flex-row gap-8 mb-[120px]">
+        <section className="max-w-[1280px] mx-auto px-8 flex flex-col lg:flex-row gap-8 mb-[80px]">
           {/* Left Column: Form (60%) */}
           <div className="lg:w-3/5 bg-surface-container-lowest rounded-[24px] p-10 lg:p-14 shadow-[0px_12px_32px_rgba(26,26,26,0.04)] border border-surface-variant">
-            <form action="#" className="space-y-8" method="POST">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="flex flex-col gap-2">
-                  <label className="font-label-caps text-label-caps text-on-surface-variant ml-1" htmlFor="name">Full Name</label>
-                  <input className="w-full bg-surface-container-low rounded-xl px-5 py-4 font-body-md text-on-surface border-none focus:ring-1 focus:ring-outline transition-shadow placeholder:text-on-surface-variant/50" id="name" name="name" placeholder="Jane Doe" type="text" />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label className="font-label-caps text-label-caps text-on-surface-variant ml-1" htmlFor="email">Email Address</label>
-                  <input className="w-full bg-surface-container-low rounded-xl px-5 py-4 font-body-md text-on-surface border-none focus:ring-1 focus:ring-outline transition-shadow placeholder:text-on-surface-variant/50" id="email" name="email" placeholder="jane@company.com" type="email" />
-                </div>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="flex flex-col gap-2">
-                  <label className="font-label-caps text-label-caps text-on-surface-variant ml-1" htmlFor="phone">Phone Number</label>
-                  <input className="w-full bg-surface-container-low rounded-xl px-5 py-4 font-body-md text-on-surface border-none focus:ring-1 focus:ring-outline transition-shadow placeholder:text-on-surface-variant/50" id="phone" name="phone" placeholder="+1 (555) 000-0000" type="tel" />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label className="font-label-caps text-label-caps text-on-surface-variant ml-1" htmlFor="business_type">Business Type</label>
-                  <select className="w-full bg-surface-container-low rounded-xl px-5 py-4 font-body-md text-on-surface border-none focus:ring-1 focus:ring-outline transition-shadow appearance-none cursor-pointer" id="business_type" name="business_type" defaultValue="">
-                    <option disabled value="">Select industry</option>
-                    <option value="tech">Technology & Startups</option>
-                    <option value="creative">Creative Agency</option>
-                    <option value="finance">Finance & Legal</option>
-                    <option value="real_estate">Real Estate</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-              </div>
-              <div className="flex flex-col gap-4">
-                <label className="font-label-caps text-label-caps text-on-surface-variant ml-1">How can we help? (Select all that apply)</label>
-                <div className="flex flex-wrap gap-3">
-                  {[
-                    { id: "inbox", label: "Inbox Management" },
-                    { id: "scheduling", label: "Scheduling" },
-                    { id: "travel", label: "Travel Booking" },
-                    { id: "research", label: "Research" },
-                    { id: "personal", label: "Personal Tasks" },
-                  ].map((item) => (
-                    <label key={item.id} className="cursor-pointer">
-                      <input className="peer sr-only" name="help[]" type="checkbox" value={item.id} />
-                      <span className="block px-5 py-2.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-caps text-label-caps border border-transparent peer-checked:bg-surface-container-highest peer-checked:text-on-surface peer-checked:border-outline transition-all">{item.label}</span>
-                    </label>
-                  ))}
-                </div>
-              </div>
-              <div className="flex flex-col gap-2">
-                <label className="font-label-caps text-label-caps text-on-surface-variant ml-1" htmlFor="message">Additional Details</label>
-                <textarea className="w-full bg-surface-container-low rounded-xl px-5 py-4 font-body-md text-on-surface border-none focus:ring-1 focus:ring-outline transition-shadow placeholder:text-on-surface-variant/50 resize-none" id="message" name="message" placeholder="Tell us a bit more about what you're looking for..." rows={4}></textarea>
-              </div>
-              <button className="w-full bg-[#994125] text-white font-label-caps text-label-caps rounded-full py-5 hover:scale-[1.02] shadow-[0px_8px_20px_rgba(153,65,37,0.2)] transition-all duration-300 uppercase tracking-widest mt-4" type="submit">
-                Send My Request
-              </button>
-            </form>
+            <ContactForm />
           </div>
           {/* Right Column: Info (40%) */}
           <div className="lg:w-2/5 flex flex-col justify-between pt-4 lg:pt-0 pl-0 lg:pl-12">
